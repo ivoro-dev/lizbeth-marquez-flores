@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* Design tokens. Source of truth: docs/DESIGN.md. Do not add colours. */
+:root {
+  --paper: #f4f1ea;
+  --ink: #111111;
+  --teal: #629fa9;
+  --orange: #ff7828;
+  --white: #ffffff;
+  --muted: #6e6a63;
+  --line: rgb(17 17 17 / 0.14);
+  /* Not a new colour: teal darkened with ink so small teal text on paper
+     passes WCAG AA (about 5:1). Ink sections switch back to plain teal. */
+  --teal-text: color-mix(in oklab, var(--teal) 65%, var(--ink));
+}
+[data-theme="ink"] {
+  --teal-text: var(--teal);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-teal: var(--teal);
+  --color-teal-text: var(--teal-text);
+  --color-orange: var(--orange);
+  --color-white: var(--white);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+
+  --font-display: var(--font-display-family), Georgia, serif;
+  --font-sans: var(--font-sans-family), system-ui, sans-serif;
+
+  /* Fluid type scale (min at 375px, max at 1600px) */
+  --text-mega: clamp(4rem, 1.2rem + 12vw, 13.5rem);
+  --text-display: clamp(3rem, 1.5rem + 6.4vw, 8rem);
+  --text-h1: clamp(2.5rem, 1.6rem + 3.8vw, 5.25rem);
+  --text-h2: clamp(2rem, 1.5rem + 2.2vw, 3.5rem);
+  --text-h3: clamp(1.5rem, 1.25rem + 1vw, 2.125rem);
+  --text-lead: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
+  --text-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --text-label: 0.8125rem;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  overflow-x: clip;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Scrollbar: thin, paper track, orange thumb, ink on hover */
+/* Standard props only where webkit pseudo-elements don't exist (Firefox);
+   Chrome ignores ::-webkit-scrollbar once scrollbar-color is set. */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange) var(--paper);
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border: 2px solid var(--paper);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.55;
+  overflow-x: clip;
+  width: 100%;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+/* Utility for SplitText line masks */
+.split-line {
+  overflow: hidden;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
