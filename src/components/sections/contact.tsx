@@ -40,7 +40,7 @@ export function Contact() {
           {rows.map((r) => (
             <li key={r.label}>
               <div className="grid grid-cols-[7rem_1fr] items-baseline gap-4 py-5 md:grid-cols-[12rem_1fr] md:py-6">
-                <Label tone="current" className="opacity-75">
+                <Label tone="current">
                   {r.label}
                 </Label>
                 <TextLink

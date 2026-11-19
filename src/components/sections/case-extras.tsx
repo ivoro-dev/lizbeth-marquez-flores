@@ -88,7 +88,7 @@ export function StatCount({ stat }: { stat: NonNullable<Project["stat"]> }) {
         <span className="sr-only">{`${stat.from} to ${stat.to} ${stat.label}`}</span>
         <span aria-hidden="true">
           {stat.from} <span className="text-[0.6em]">→</span>{" "}
-          <span className="text-orange">
+          <span className="bg-orange text-ink box-decoration-clone px-[0.04em]">
             <span data-count>{to}</span>
             {suffix}
           </span>

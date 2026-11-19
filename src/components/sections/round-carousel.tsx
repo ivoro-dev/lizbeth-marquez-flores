@@ -170,9 +170,9 @@ export function RoundCarousel() {
                     <span className="text-[10px] font-semibold tracking-widest text-orange uppercase">
                       {card.number} · {card.tag}
                     </span>
-                    <h3 className="font-display text-paper mt-1 text-base leading-snug md:text-lg">
+                    <p className="font-display text-paper mt-1 text-base leading-snug md:text-lg">
                       {card.title}
-                    </h3>
+                    </p>
                   </div>
                 </article>
               </div>

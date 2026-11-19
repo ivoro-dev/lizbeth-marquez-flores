@@ -11,7 +11,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: `${site.name} | ${site.title}`,
   description: `${site.name}. ${site.title}. ${site.range}.`,
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {

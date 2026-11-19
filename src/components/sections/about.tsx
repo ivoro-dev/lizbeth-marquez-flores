@@ -22,6 +22,20 @@ export function About() {
       const el = root.current?.querySelector<HTMLElement>("[data-scrub]");
       if (!el) return;
       const split = SplitText.create(el, { type: "words" });
+      // Dim the words only just before they scroll into view, so the
+      // page never loads with low-contrast text (Lighthouse contrast audit).
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top bottom+=200",
+        once: true,
+        onEnter: (self) => {
+          if (
+            self.progress < 1 &&
+            el.getBoundingClientRect().top > innerHeight * 0.75
+          )
+            gsap.set(split.words, { opacity: 0.15 });
+        },
+      });
       gsap.fromTo(
         split.words,
         { opacity: 0.15 },
@@ -29,6 +43,7 @@ export function About() {
           opacity: 1,
           stagger: 0.1,
           ease: "none",
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: "top 75%",
