@@ -68,7 +68,7 @@ export function About() {
         {HIGHLIGHT_AT > -1 ? (
           <>
             {about.headline.slice(0, HIGHLIGHT_AT)}
-            <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
+            <span className="bg-teal text-paper box-decoration-clone px-[0.04em]">
               {HIGHLIGHT}
             </span>
           </>

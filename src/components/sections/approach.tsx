@@ -77,7 +77,7 @@ export function Approach() {
         className="font-display text-display mt-8 leading-[0.95] tracking-[-0.02em]"
       >
         {approach.name.replace(/Diagnosis$/, "")}
-        <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
+        <span className="bg-teal text-paper box-decoration-clone px-[0.04em]">
           Diagnosis
         </span>
       </SplitReveal>
@@ -168,7 +168,7 @@ export function Approach() {
               className="font-display text-h1 leading-[1.05] tracking-[-0.015em]"
             >
               {line === "Name it plainly." ? (
-                <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
+                <span className="bg-teal text-paper box-decoration-clone px-[0.04em]">
                   {line}
                 </span>
               ) : (

@@ -126,7 +126,7 @@ export function CaseFile({ project, ink, children }: CaseFileProps) {
             id={`${p.slug}-title`}
             className="font-display text-h1 max-w-[20ch] leading-[1] tracking-[-0.015em] text-balance"
           >
-            <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
+            <span className="bg-teal text-paper box-decoration-clone px-[0.04em]">
               {p.title}
             </span>
           </h3>

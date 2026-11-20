@@ -169,7 +169,7 @@ export function Cover() {
                 data-name-line
                 className="block text-[min(12vw,15rem)] whitespace-nowrap"
               >
-                <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
+                <span className="bg-teal text-paper box-decoration-clone px-[0.04em]">
                   {site.lastName.split("-")[0]}
                 </span>
                 -{site.lastName.split("-").slice(1).join("-")}
@@ -178,7 +178,7 @@ export function Cover() {
             {/* Mobile: two lines */}
             <span className="split-line block md:hidden">
               <span data-name-line className="block text-[18vw]">
-                <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
+                <span className="bg-teal text-paper box-decoration-clone px-[0.04em]">
                   Marquez
                 </span>
                 -

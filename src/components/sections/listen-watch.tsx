@@ -82,7 +82,7 @@ export function ListenWatch() {
           className="font-display text-display leading-[0.95] tracking-[-0.02em]"
         >
           Listen &amp;{" "}
-          <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
+          <span className="bg-teal text-paper box-decoration-clone px-[0.04em]">
             Watch
           </span>
         </SplitReveal>
