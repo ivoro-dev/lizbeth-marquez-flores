@@ -9,7 +9,7 @@ import { Section } from "@/components/ui/section";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { ScrollTrigger, SplitText, gsap, useGSAP } from "@/lib/gsap";
 
-const HIGHLIGHT = "what they are.";
+const HIGHLIGHT = "who they are.";
 const HIGHLIGHT_AT = about.headline.indexOf(HIGHLIGHT);
 
 export function About() {
@@ -68,7 +68,7 @@ export function About() {
         {HIGHLIGHT_AT > -1 ? (
           <>
             {about.headline.slice(0, HIGHLIGHT_AT)}
-            <span className="bg-orange text-ink box-decoration-clone px-[0.04em]">
+            <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
               {HIGHLIGHT}
             </span>
           </>
@@ -88,9 +88,14 @@ export function About() {
           <p className="text-lead max-w-[36ch] leading-[1.4] hyphens-auto md:text-justify">
             {about.paragraphs[0]}
           </p>
-          <p className="text-body text-ink/80 mt-8 max-w-[62ch] hyphens-auto md:text-justify">
-            {about.paragraphs[1]}
-          </p>
+          {about.paragraphs.slice(1).map((para) => (
+            <p
+              key={para.slice(0, 24)}
+              className="text-body text-ink/80 mt-8 max-w-[62ch] hyphens-auto md:text-justify"
+            >
+              {para}
+            </p>
+          ))}
 
           <div className="mt-14">
             <Label as="h3">Credentials</Label>

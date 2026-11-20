@@ -35,14 +35,14 @@ export function TextLink({
       )}
       {...props}
     >
-      <span className="bg-[linear-gradient(var(--color-orange),var(--color-orange))] bg-[length:100%_0.06em] bg-left-bottom bg-no-repeat pb-[0.08em] transition-[background-size,color] duration-500 ease-[var(--ease-out-expo)] group-hover:text-orange group-hover:bg-[length:100%_0.12em] group-focus-visible:bg-[length:100%_0.12em]">
+      <span className="group-hover:text-orange bg-[linear-gradient(var(--color-teal),var(--color-teal))] bg-[length:100%_0.06em] bg-left-bottom bg-no-repeat pb-[0.08em] transition-[background-size,color] duration-500 ease-[var(--ease-out-expo)] group-hover:bg-[length:100%_0.12em] group-focus-visible:bg-[length:100%_0.12em]">
         {children}
       </span>
       {!noIcon && (
         <ArrowUpRightIcon
           aria-hidden="true"
           weight="light"
-          className="text-orange size-[0.9em] shrink-0 translate-y-[0.1em] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-[0.12em] group-hover:-translate-y-[0.02em]"
+          className="text-teal-text group-hover:text-orange size-[0.9em] shrink-0 translate-y-[0.1em] transition-[transform,color] duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-[0.12em] group-hover:-translate-y-[0.02em]"
         />
       )}
       {external && <span className="sr-only"> (opens in a new tab)</span>}

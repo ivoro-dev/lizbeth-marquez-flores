@@ -34,13 +34,16 @@ export const media: MediaItem[] = [
   },
 ];
 
-/** Extra press, text only (no links provided except NBC small-business story). */
+/** Extra press. NBC small-business story and CT Insider article are linked. */
 export const press = [
   {
     outlet: "NBC Connecticut",
     href: "https://www.nbcconnecticut.com/news/local/supporting-small-business-dreams-locks-of-liz-offers-all-natural-haircare/2337706/",
   },
   { outlet: "NPR" },
-  { outlet: "CT Insider" },
+  {
+    outlet: "CT Insider",
+    href: "https://www.ctinsider.com/business/article/ct-lizbeth-marquez-flores-locks-of-liz-curly-hair-19851435.php",
+  },
   { outlet: "FOX61" },
 ];

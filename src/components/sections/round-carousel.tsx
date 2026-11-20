@@ -2,39 +2,14 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { scopeCards } from "@/content";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { gsap, useGSAP } from "@/lib/gsap";
 
-const CARDS = [
-  {
-    src: "/images/unsorted/ig-carousel-who-should-you-see-1.webp",
-    alt: "Who should you see clinic triage carousel",
-    title: "Who Should You See?",
-    tag: "Triage & Education",
-    number: "01",
-  },
-  {
-    src: "/images/unsorted/ig-carousel-guljan-founder-2.webp",
-    alt: "Guljan acupuncturist and founder positioning",
-    title: "Founder Authority",
-    tag: "Brand Leadership",
-    number: "02",
-  },
-  {
-    src: "/images/unsorted/ig-giveaway.webp",
-    alt: "Holistic Health partnership giveaway",
-    title: "Community Outreach",
-    tag: "Audience Activation",
-    number: "03",
-  },
-  {
-    src: "/images/unsorted/img-7196.webp",
-    alt: "Acupuncture visit walkthrough from start to finish",
-    title: "Patient Journey",
-    tag: "Experience Narrative",
-    number: "04",
-  },
-];
+const CARDS = scopeCards.map((c, i) => ({
+  ...c,
+  number: String(i + 1).padStart(2, "0"),
+}));
 
 // Dial geometry per breakpoint. Cards sit on the top arc of a circle whose
 // centre is below the stage; `step` is the angle between neighbouring cards
@@ -114,11 +89,11 @@ export function RoundCarousel() {
     <section
       ref={sectionRef}
       id="visual-strategy"
-      aria-label="Visual Strategy Semicircle Carousel"
-      className="bg-paper text-ink relative flex h-svh min-h-[560px] w-full flex-col justify-between overflow-hidden py-10 md:py-14 select-none"
+      aria-label="Areas of work"
+      className="bg-teal text-ink relative flex h-svh min-h-[560px] w-full flex-col justify-between overflow-hidden rounded-t-[50%_clamp(120px,26vw,440px)] pt-10 select-none md:pt-14"
     >
       {/* Semicircle Display Stage */}
-      <div className="relative flex flex-1 items-center justify-center overflow-hidden">
+      <div className="relative flex flex-1 items-center justify-center">
         {/* Central Rotating Wheel Hub: sits `radius` below the stage centre */}
         <div
           ref={wheelRef}
@@ -131,7 +106,7 @@ export function RoundCarousel() {
           {/* Subtle track guide (dashed circle) */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute rounded-full border border-dashed border-ink/15"
+            className="border-paper/50 pointer-events-none absolute rounded-full border border-dashed"
             style={{
               width: `${radius * 2}px`,
               height: `${radius * 2}px`,
@@ -152,23 +127,23 @@ export function RoundCarousel() {
               >
                 <article
                   style={{ width: `${cardW}px` }}
-                  className="group relative aspect-[3/4] overflow-hidden rounded-sm border border-ink/15 bg-paper shadow-[0_18px_45px_-10px_rgba(17,17,17,0.18)] transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-[0_24px_55px_-8px_rgba(17,17,17,0.28)]"
+                  className="group border-ink/15 bg-paper relative aspect-[3/4] overflow-hidden rounded-sm border shadow-[0_18px_45px_-10px_rgba(17,17,17,0.18)]"
                 >
                   <Image
                     src={card.src}
                     alt={card.alt}
                     fill
                     sizes="(min-width: 1024px) 280px, 200px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-top"
                   />
 
                   {/* Gradient Legibility Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent" />
+                  <div className="from-ink/90 via-ink/25 absolute inset-0 bg-gradient-to-t to-transparent" />
 
                   {/* Card Editorial Labels */}
-                  <div className="absolute inset-x-0 bottom-0 p-4 text-paper">
-                    <span className="text-[10px] font-semibold tracking-widest text-orange uppercase">
-                      {card.number} · {card.tag}
+                  <div className="text-paper absolute inset-x-0 bottom-0 p-4">
+                    <span className="text-teal text-[10px] font-semibold tracking-widest uppercase">
+                      {card.number}
                     </span>
                     <p className="font-display text-paper mt-1 text-base leading-snug md:text-lg">
                       {card.title}
@@ -180,8 +155,6 @@ export function RoundCarousel() {
           })}
         </div>
       </div>
-
     </section>
   );
 }
-

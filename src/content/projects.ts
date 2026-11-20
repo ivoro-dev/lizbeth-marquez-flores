@@ -96,6 +96,36 @@ export const projects: Project[] = [
         height: 1800,
       },
       {
+        src: "/images/unsorted/ig-carousel-who-should-you-see-1.webp",
+        alt: "Instagram carousel: Who should you see?",
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: "/images/unsorted/ig-carousel-guljan-founder-2.webp",
+        alt: "Instagram carousel: introducing the founder and acupuncturist",
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: "/images/unsorted/img-7196.webp",
+        alt: "Short-form video: your visit from start to finish",
+        width: 1013,
+        height: 1800,
+      },
+      {
+        src: "/images/unsorted/postpartum-tcm-flyer.webp",
+        alt: "Postpartum care flyer: Warm, Rested, Fed.",
+        width: 1391,
+        height: 1800,
+      },
+      {
+        src: "/images/unsorted/ig-giveaway.webp",
+        alt: "Instagram giveaway post with Holistic Health Code",
+        width: 1080,
+        height: 1440,
+      },
+      {
         src: "/images/wholeness/review-graphic.webp",
         alt: "Client review social graphic",
         width: 1080,
@@ -147,15 +177,27 @@ export const projects: Project[] = [
     role: "Co-Founder & Brand Architect",
     disciplines: ["Brand Development", "Event Marketing", "Earned Media"],
     challenge:
-      "Connecticut had networking events for women. It didn't have one women actually wanted to attend twice.",
+      "Connecticut had networking events for women in business. It didn't have one women actually wanted to attend twice.",
     decision:
-      "Treat the event series as a brand rather than a calendar: consistent identity, a clear point of view on what the room was for, speaker programming that matched the promise.",
+      "Treat the event series as a brand rather than a calendar: consistent identity, community, a clear point of view on what the room was for, speaker programming that matched the promise.",
     work: "Brand identity and event marketing system. Speaker programming. Media and community outreach. Attendee experience design.",
     outcomeLabel: "Results",
     outcome:
       "Grew attendance from 50 to 130+ and expanded across state lines. Featured on NBC Connecticut and FOX61.",
     stat: { from: "50", to: "130+", label: "attendees per event" },
     images: [
+      {
+        src: "/images/boss-babes/event-2-shoutout.webp",
+        alt: "Instagram story reposting a full room at a Boss Babes & Brunch event",
+        width: 1179,
+        height: 1241,
+      },
+      {
+        src: "/images/boss-babes/event-1-room.webp",
+        alt: "Speaker presenting to guests at a Boss Babes & Brunch event",
+        width: 903,
+        height: 1600,
+      },
       {
         src: "/images/boss-babes/brand-kit.webp",
         alt: "Boss Babes & Brunch brand kit",
@@ -201,10 +243,11 @@ export const projects: Project[] = [
     challenge:
       "Build a podcast brand from nothing in a category where most shows sound identical inside thirty seconds.",
     decision:
-      "Build the brand before the first episode: name, identity, and editorial point of view first, so the content had something to be consistent with. Distribution designed around short-form video rather than treated as an afterthought.",
+      "Build the brand before the first episode: name, identity, and editorial point of view first, so the content had something to be consistent with. Audience reach and engagement designed around short-form video on socials rather than treated as an afterthought.",
     work: "Full brand identity and cover art. Editorial positioning and episode framework. Cross-platform strategy across TikTok and major streaming platforms.",
     outcomeLabel: "Status",
-    outcome: "Launched April 2026, publishing biweekly.",
+    outcome:
+      "Launched April 2026, publishing biweekly. Season 1, 12 episodes complete, Season 2 in the works. Video Format and YouTube launch for 2027.",
     images: [
       {
         src: "/images/work-drama/logo.webp",

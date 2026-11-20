@@ -78,7 +78,7 @@ export default function PdfPortfolio() {
                 <span className="text-orange">Marquez</span>-Flores
               </h1>
               <p className="font-sans text-lead text-muted mt-6 max-w-[42ch]">
-                Diagnosing what's broken, defining strategic positioning, and building brands with clinical clarity.
+                Diagnosing what&apos;s broken, defining strategic positioning, and building brands with clinical clarity.
               </p>
             </div>
 
@@ -133,9 +133,14 @@ export default function PdfPortfolio() {
               <p className="text-body text-ink/90 mt-5 leading-relaxed">
                 {about.paragraphs[0]}
               </p>
-              <p className="text-body text-ink/80 mt-4 leading-relaxed">
-                {about.paragraphs[1]}
-              </p>
+              {about.paragraphs.slice(1).map((para) => (
+                <p
+                  key={para.slice(0, 24)}
+                  className="text-body text-ink/80 mt-4 leading-relaxed"
+                >
+                  {para}
+                </p>
+              ))}
 
               <div className="mt-6 pt-5 border-t border-ink/10">
                 <span className="text-label text-teal tracking-wider uppercase font-semibold block mb-2">

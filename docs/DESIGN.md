@@ -10,8 +10,8 @@ Her brief in one line: _"Show thinking: what was wrong, what I decided, what I m
 | -------- | ---------- | ------------------------------------------------------------------------------------------------ |
 | `paper`  | #F4F1EA    | Default background                                                                               |
 | `ink`    | #111111    | Text, dark sections                                                                              |
-| `teal`   | #629FA9    | Her brand. Labels, rules, small accents, Contact background                                      |
-| `orange` | #FF7828    | Her brand. **Only** for: Decision highlight, hover states, one key number per section, selection |
+| `teal`   | #629FA9    | Her **main** brand colour (client, 20 Nov). Highlights, labels, links, dial band, Contact        |
+| `orange` | #FF7828    | Accent only: Decision underline, hover states, one key number per section (130+, 72h), cursor    |
 | `muted`  | #6E6A63    | Secondary text                                                                                   |
 | `line`   | ink at 14% | 1px rules                                                                                        |
 
@@ -51,7 +51,7 @@ Ink panel with labels, an `LMF` mark, a large 000 to 100 counter and an orange r
 
 - Top row (labels, between rules): left `Brand Strategy & Brand Storytelling`, right `Selected Work 2019–2026`.
 - Name in `text-mega` Gloock across two lines: `Lizbeth` / `Marquez-Flores`. **The full name must always be fully legible. Nothing may overlap the letters.** (Her old site's photo cut her name into "FLO RES". This is the most important rule on the page.) On mobile, `Marquez-Flores` may break as `Marquez-` / `Flores`.
-- Portrait (`coverPortrait`) in a tall narrow frame (aspect 3/4, ~22vw desktop) placed in the space beside/below the name, never on top of it.
+- Portrait (`coverPortrait`): background-removed cut-out, large (up to full cover height), standing at the right. It sits **behind** the name (z-index), so it blends with the type but never covers a letter. (Client, 20 Nov: the old framed photo looked small and "like a post-it".)
 - Bottom row: index of the four case files as anchor links (`01 Locks of Liz` …) + small "Scroll" label.
 - Scroll: portrait frame scales 1 → 1.08 with inner image parallax; first name line drifts left, second drifts right (max 6vw). Scrubbed.
 

@@ -25,11 +25,17 @@ export function Approach() {
   useGSAP(
     () => {
       const el = root.current;
-      if (!el || reduced) return;
+      if (!el) return;
       const q = gsap.utils.selector(el);
       const row = q("[data-pillars]")[0];
       const count = q("[data-hours]")[0];
       if (!row || !count) return;
+      // Reduced motion: final number (also undoes a count started before the
+      // media query resolved after hydration).
+      if (reduced) {
+        count.textContent = String(hours);
+        return;
+      }
 
       // Orange line draws across the pillars to 72h
       gsap.fromTo(
@@ -71,7 +77,7 @@ export function Approach() {
         className="font-display text-display mt-8 leading-[0.95] tracking-[-0.02em]"
       >
         {approach.name.replace(/Diagnosis$/, "")}
-        <span className="bg-orange text-ink box-decoration-clone px-[0.04em]">
+        <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
           Diagnosis
         </span>
       </SplitReveal>
@@ -162,7 +168,7 @@ export function Approach() {
               className="font-display text-h1 leading-[1.05] tracking-[-0.015em]"
             >
               {line === "Name it plainly." ? (
-                <span className="bg-orange text-ink box-decoration-clone px-[0.04em]">
+                <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
                   {line}
                 </span>
               ) : (

@@ -10,7 +10,8 @@ Sizes are width x height in px.
 
 | File            | Size      | What it shows                                                                      | Suggested use                |
 | --------------- | --------- | ---------------------------------------------------------------------------------- | ---------------------------- |
-| lizbeth-09.webp | 1024x1535 | Full body, teal-blue blouse, jeans, sitting on edge of wooden table, smiling       | **Cover hero**               |
+| lizbeth-09.webp | 1024x1535 | Full body, teal-blue blouse, jeans, sitting on edge of wooden table, smiling       | Source of cover cut-out      |
+| lizbeth-09-cutout.webp | 427x1104 | Same photo, background removed (transparent), cropped to her                | **Cover hero**               |
 | lizbeth-07.webp | 1024x1535 | Same outfit, at table with laptop, looking away                                    | Cover alt                    |
 | lizbeth-06.webp | 1024x1535 | Same outfit, leaning on table, laptop                                              | Spare                        |
 | lizbeth-03.webp | 1024x1535 | Blue blouse, at table reviewing printed brand documents (teal/orange)              | **About** or Approach        |
@@ -80,7 +81,8 @@ No audit page (it's an 11-page document) and no reel covers: both dropped by the
 | brand-mark.webp | 500x500   | Icon mark only                                                     |
 | brand-kit.webp  | 1272x1800 | Full brand kit: logos, palette, fonts, moodboard incl. event photo |
 
-Missing (requested): event photos of a full room, event graphics.
+`event-1-room` (speaker + guests) and `event-2-shoutout` (repost of the full room) are in the gallery. `event-2-room` is a crop of the shoutout, unused.
+Missing (requested 20 Nov): empty-room setup photos (event planner set-up), event graphics.
 
 ## approach/ (The Diagnosis section)
 
@@ -99,7 +101,7 @@ Soul Circle Alliance and Cornerstone Wellness brand kits exist in client-assets 
 | workshop-flyer.webp      | 830x1800  | "The Best Kept Secret" workshop flyer in her teal/orange |
 | client-testimonials.webp | 1080x1080 | Testimonials graphic                                     |
 
-## unsorted/ (added 19 Nov, placement not decided; ask Lizbeth)
+## unsorted/ (added 19 Nov; client confirmed 20 Nov these are her Wholeness work, now in the Wholeness gallery)
 
 Originals in `client-assets/99-unsorted/`. All appear to be Wholeness Acupuncture Center work, but not confirmed.
 

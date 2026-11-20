@@ -24,6 +24,18 @@ Each task lists what "done" means. Follow `CLAUDE.md` for checks.
 - [x] **11. Responsive + a11y pass.** (19 Nov: code-level pass plus Lighthouse/axe. Teal label text darkened via `--teal-text` for AA, split-text aria fixed, duplicate alt removed, menu focus states. Multi-width visual check not done, no screenshots.) 360, 390, 768, 1024, 1440, 1920 widths. Focus states, alt text, heading order (one h1 = her name), link labels, no horizontal overflow.
 - [x] **12. Production check.** (19 Nov: build passes; Lighthouse desktop performance 90, accessibility 96.) `npm run build` passes. Lighthouse (desktop) ≥ 85 performance, ≥ 95 accessibility. Fix the top issues only.
 
+## Phase 4: Client feedback (20 Nov voice notes + red edits in her brief doc)
+
+- [x] **13. Copy from her red edits.** (20 Nov.) About rewritten to lead with why hire her (headline now "who they are"); Boss Babes challenge/decision wording; Work Drama decision + status (Season 1, Season 2, YouTube 2027); CT Insider article linked in press row.
+- [x] **14. Wholeness content to its case.** (20 Nov.) The 5 `unsorted/` pieces (carousel slides, reel frame, postpartum flyer, giveaway) moved from the cover dial into the Wholeness gallery.
+- [x] **15. Cover dial = photos of her.** (20 Nov.) `round-carousel.tsx` now uses `scopeCards` in `content/about.ts`: 5 photos of Lizbeth titled by discipline. Section background teal.
+- [x] **16. Boss Babes event photos.** (20 Nov.) Added repost of the full room + speaker photo. `event-2-room` not used (crop of the repost). Empty-room setup photos still needed from client.
+- [x] **17. More teal.** (20 Nov.) Highlights, links, scrollbar, selection, intro counter now teal. Orange kept only for: Decision underline, `130+`, `72h` + its line, hovers, cursor, Featured label.
+- [x] **18. Cover portrait.** (20 Nov.) Background removed (`portrait/lizbeth-09-cutout.webp`), large, stands behind the name (z-index) so letters are never covered.
+- [ ] **19. Wholeness analytics before/after.** Waiting for a "before" Instagram insights screenshot from client. Pair it with `insights-30-days` in the "One month later" block.
+
+Also fixed 20 Nov: with reduced motion, SplitReveal headings could stay hidden and `72h` / `130+` showed 0 (hook resolves after hydration). Now final state.
+
 ## Later (not in first version, wait for client feedback)
 
 - PDF version (landscape, under 10MB, clickable links, file name `Lizbeth-Marquez-Flores-Brand-Portfolio.pdf`)

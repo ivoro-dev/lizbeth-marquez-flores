@@ -8,7 +8,7 @@ import { DUR, EASE, gsap, useGSAP } from "@/lib/gsap";
 /**
  * Preloader:
  * - Top-right "LMF" mark
- * - Large 000 to 100 counter at bottom (orange, Gloock font)
+ * - Large 000 to 100 counter at bottom (teal, Gloock font)
  * - Number animates smoothly from 000 to 100
  * - Slides up to reveal cover section
  */
@@ -149,7 +149,7 @@ export function Intro() {
       <div>
         <p
           data-intro-count
-          className="font-display text-orange text-[clamp(5rem,22vw,22rem)] leading-[0.8] tracking-[-0.04em] tabular-nums"
+          className="font-display text-teal text-[clamp(5rem,22vw,22rem)] leading-[0.8] tracking-[-0.04em] tabular-nums"
         >
           000
         </p>

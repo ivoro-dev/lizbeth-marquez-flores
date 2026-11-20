@@ -1,10 +1,11 @@
 import type { Img } from "@/types/content";
 
 export const about = {
-  headline: "I build brands that know what they are.",
+  headline: "I build brands that know who they are.",
   paragraphs: [
-    "My background is unusual on purpose. Seventeen years in clinical healthcare taught me how people actually decide what to trust about their own bodies. Seven years founding and running a patented consumer brand taught me what happens when strategy meets a purchase order. Today I run The Brand Formula, a brand strategy practice for established business owners who are good at what they do and invisible in their market.",
-    "I work diagnostically. Before I recommend anything, I find out what's actually broken positioning, voice, visual direction, audience alignment and I say so plainly. Most brands don't need more content. They need to decide who they are first.",
+    "Most brands don’t need more content. They need to decide who they are first.",
+    "That’s the work I do: finding what’s actually broken in a brand, naming it plainly, and building the version that makes the business recognizable. Positioning, voice, visual direction, audience alignment. Most of it starts with the words that make a brand understood, trusted, and remembered and I won’t recommend anything before I know what’s wrong.",
+    "My background is unusual on purpose. Seventeen years in clinical healthcare and a degree in Biology taught me how people actually decide what to trust about their own bodies and how to read the evidence behind a claim myself. Seven years founding and running a patented consumer brand taught me what happens when strategy meets a purchase order; pricing, packaging, inventory, and a P&L I answered for. Today I run The Brand Formula, a brand strategy practice for established business owners who are good at what they do but invisible in their market.",
   ],
   credentials: [
     "Certified in Brand Management, University of London's London Business School",
@@ -27,8 +28,47 @@ export const bandPortrait: Img = {
 };
 
 export const coverPortrait: Img = {
-  src: "/images/portrait/lizbeth-06.webp",
-  alt: "Lizbeth Marquez-Flores leaning on a wooden table with a laptop",
-  width: 1024,
-  height: 1535,
+  src: "/images/portrait/lizbeth-09-cutout.webp",
+  alt: "Lizbeth Marquez-Flores standing, smiling, in a blue blouse and jeans",
+  width: 427,
+  height: 1104,
 };
+
+/** Cards on the dial under the cover: Lizbeth at work, titled by discipline. */
+export const scopeCards: (Img & { title: string })[] = [
+  {
+    src: "/images/portrait/lizbeth-07.webp",
+    alt: "Lizbeth Marquez-Flores at a table with her laptop",
+    width: 1024,
+    height: 1535,
+    title: "Brand Strategy",
+  },
+  {
+    src: "/images/portrait/lizbeth-18.webp",
+    alt: "Lizbeth pinning colour swatches and brand cards to a wall",
+    width: 1024,
+    height: 1535,
+    title: "Visual Identity",
+  },
+  {
+    src: "/images/work-drama/host-55.webp",
+    alt: "Lizbeth in the Work Drama studio with the red mug",
+    width: 1024,
+    height: 1535,
+    title: "Storytelling",
+  },
+  {
+    src: "/images/portrait/lizbeth-26.webp",
+    alt: "Lizbeth on a sofa with her laptop, smiling",
+    width: 1024,
+    height: 1535,
+    title: "Content Strategy",
+  },
+  {
+    src: "/images/work-drama/host-49.webp",
+    alt: "Lizbeth at the podcast desk with a microphone",
+    width: 1024,
+    height: 683,
+    title: "Interviewing",
+  },
+];

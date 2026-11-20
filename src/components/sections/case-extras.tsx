@@ -33,13 +33,13 @@ export function PressRow() {
                   target="_blank"
                   rel="noreferrer"
                   data-cursor="Open"
-                  className="group hover:text-orange focus-visible:outline-orange inline-flex items-baseline gap-[0.2em] underline decoration-orange decoration-[0.06em] underline-offset-[0.18em] outline-offset-4 transition-colors duration-500 focus-visible:outline-2"
+                  className="group hover:text-orange focus-visible:outline-orange decoration-teal inline-flex items-baseline gap-[0.2em] underline decoration-[0.06em] underline-offset-[0.18em] outline-offset-4 transition-colors duration-500 focus-visible:outline-2"
                 >
                   {p.outlet}
                   <ArrowUpRightIcon
                     aria-hidden="true"
                     weight="light"
-                    className="text-orange size-[0.7em] shrink-0 transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-[0.12em] group-hover:-translate-y-[0.12em]"
+                    className="text-teal-text size-[0.7em] shrink-0 transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-[0.12em] group-hover:-translate-y-[0.12em]"
                   />
                   <span className="sr-only"> (opens in a new tab)</span>
                 </a>
@@ -65,7 +65,13 @@ export function StatCount({ stat }: { stat: NonNullable<Project["stat"]> }) {
   useGSAP(
     () => {
       const el = root.current?.querySelector<HTMLElement>("[data-count]");
-      if (!el || reduced) return;
+      if (!el) return;
+      // Reduced motion: final number (also undoes a count started before the
+      // media query resolved after hydration).
+      if (reduced) {
+        el.textContent = String(to);
+        return;
+      }
       const num = { v: from };
       el.textContent = String(from);
       gsap.to(num, {

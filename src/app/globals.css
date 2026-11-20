@@ -58,13 +58,33 @@ html.lenis body {
   overscroll-behavior: contain;
 }
 
-/* Scrollbar: thin, paper track, orange thumb, ink on hover */
+/* Scrollbar hidden (client, 20 Nov): the native track showed as a paper
+   strip on the right edge of full-bleed teal/ink sections. Scrolling is
+   unchanged (wheel, touch, keys, Lenis). */
+html {
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Scrollbar: thin, paper track, teal thumb, ink on hover */
 /* Standard props only where webkit pseudo-elements don't exist (Firefox);
    Chrome ignores ::-webkit-scrollbar once scrollbar-color is set. */
 @supports not selector(::-webkit-scrollbar) {
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--orange) var(--paper);
+    scrollbar-color: var(--teal) var(--paper);
   }
 }
 ::-webkit-scrollbar {
@@ -75,7 +95,7 @@ html.lenis body {
   background: var(--paper);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--orange);
+  background: var(--teal);
   border: 2px solid var(--paper);
   border-radius: 0;
 }
@@ -94,7 +114,7 @@ body {
 }
 
 ::selection {
-  background: var(--orange);
+  background: var(--teal);
   color: var(--ink);
 }
 

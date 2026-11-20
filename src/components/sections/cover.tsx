@@ -8,10 +8,9 @@ import { onIntroDone } from "@/lib/intro";
 import { DUR, EASE, gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 
 /**
- * Cover. Rule #1: her full name is always fully legible, nothing overlaps it.
- * Desktop: "Lizbeth" bottom-left of a row with the portrait on the right,
- * "Marquez-Flores" on its own full-width line below.
- * Mobile: portrait, then "Lizbeth" / "Marquez-" / "Flores".
+ * Cover. Rule #1: her full name is always fully legible. The cut-out portrait
+ * sits BEHIND the name (z-index), so letters are never covered; only light
+ * parts of the photo (jeans, wall-free cut-out) pass behind the type.
  */
 export function Cover() {
   const root = useRef<HTMLElement>(null);
@@ -34,7 +33,7 @@ export function Cover() {
       // Hidden start state (set before paint, so no flash).
       gsap.set(lines, { yPercent: 130 });
       gsap.set(frame, { clipPath: "inset(100% 0% 0% 0%)" });
-      gsap.set(img, { scale: 1.25 });
+      gsap.set(img, { scale: 1.08 });
 
       const enter = () =>
         gsap
@@ -77,11 +76,6 @@ export function Cover() {
           ease: "none",
           scrollTrigger: st,
         });
-        gsap.fromTo(
-          img,
-          { yPercent: 0 },
-          { yPercent: 8, ease: "none", scrollTrigger: st },
-        );
       });
 
       // Portrait floats toward the cursor, capped to a small range.
@@ -125,45 +119,46 @@ export function Cover() {
       aria-label="Cover"
       className="relative overflow-x-clip pt-[clamp(72px,8vw,112px)] pb-[clamp(24px,3vw,40px)]"
     >
-      <Container className="flex min-h-[calc(100svh-clamp(72px,8vw,112px)-clamp(24px,3vw,40px))] flex-col">
-        {/* Name + portrait */}
-        <h1 className="font-display text-ink mt-[clamp(28px,4vw,56px)] flex flex-1 flex-col justify-end leading-[0.9] tracking-[-0.02em]">
+      <Container className="relative flex min-h-[calc(100svh-clamp(72px,8vw,112px)-clamp(24px,3vw,40px))] flex-col">
+        {/* Cut-out portrait: stands behind the name, never in front of it.
+            Mobile: centred-right above the name, feet tucked behind "Lizbeth".
+            Desktop: just right of centre, full height, legs behind "-Flores". */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 bottom-[calc(18vw*2.2)] md:bottom-0"
+        >
+          <div
+            data-portrait-scale
+            className="absolute right-[4%] bottom-0 h-[min(100%,620px)] origin-bottom md:right-auto md:left-[56%] md:h-[min(100%,1040px)] lg:left-[54%]"
+          >
+            <div data-portrait-frame className="relative h-full">
+              <Image
+                data-portrait-img
+                src={coverPortrait.src}
+                alt=""
+                width={coverPortrait.width}
+                height={coverPortrait.height}
+                priority
+                sizes="(min-width: 768px) 32vw, 50vw"
+                className="h-full w-auto origin-bottom object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h1 className="font-display text-ink relative z-[1] mt-[clamp(28px,4vw,56px)] flex flex-1 flex-col justify-end leading-[0.9] tracking-[-0.02em]">
           <span className="sr-only">{site.name}</span>
 
           <span
+            data-drift="left"
             aria-hidden="true"
-            className="grid grid-cols-12 items-end gap-x-[clamp(16px,2vw,32px)]"
+            className="split-line block"
           >
-            {/* Portrait: above the name on mobile, right of "Lizbeth" on desktop */}
             <span
-              data-portrait-scale
-              className="relative col-span-7 col-start-6 row-start-1 mb-[clamp(20px,5vw,32px)] block origin-bottom md:col-span-3 md:col-start-10 md:mb-[0.12em]"
+              data-name-line
+              className="block text-[18vw] md:text-[min(12vw,15rem)]"
             >
-              <span
-                data-portrait-frame
-                className="bg-ink/5 relative z-[1] block aspect-[3/4] w-full overflow-hidden"
-              >
-                <Image
-                  data-portrait-img
-                  src={coverPortrait.src}
-                  alt=""
-                  fill
-                  priority
-                  sizes="(min-width: 768px) 24vw, 58vw"
-                  className="object-cover object-[50%_20%]"
-                />
-              </span>
-            </span>
-
-            <span className="col-span-12 row-start-2 block md:col-span-8 md:row-start-1">
-              <span data-drift="left" className="split-line block">
-                <span
-                  data-name-line
-                  className="block text-[18vw] md:text-[min(12vw,15rem)]"
-                >
-                  {site.firstName}
-                </span>
-              </span>
+              {site.firstName}
             </span>
           </span>
 
@@ -174,7 +169,7 @@ export function Cover() {
                 data-name-line
                 className="block text-[min(12vw,15rem)] whitespace-nowrap"
               >
-                <span className="bg-orange text-ink box-decoration-clone px-[0.04em]">
+                <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
                   {site.lastName.split("-")[0]}
                 </span>
                 -{site.lastName.split("-").slice(1).join("-")}
@@ -183,7 +178,7 @@ export function Cover() {
             {/* Mobile: two lines */}
             <span className="split-line block md:hidden">
               <span data-name-line className="block text-[18vw]">
-                <span className="bg-orange text-ink box-decoration-clone px-[0.04em]">
+                <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
                   Marquez
                 </span>
                 -

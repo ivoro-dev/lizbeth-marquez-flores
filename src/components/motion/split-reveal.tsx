@@ -57,7 +57,7 @@ export function SplitReveal({
 
       return () => split.revert();
     },
-    { scope: ref, dependencies: [reduced, type, delay] },
+    { scope: ref, dependencies: [reduced, type, delay], revertOnUpdate: true },
   );
 
   return (

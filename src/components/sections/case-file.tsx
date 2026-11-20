@@ -126,7 +126,7 @@ export function CaseFile({ project, ink, children }: CaseFileProps) {
             id={`${p.slug}-title`}
             className="font-display text-h1 max-w-[20ch] leading-[1] tracking-[-0.015em] text-balance"
           >
-            <span className="bg-orange text-ink box-decoration-clone px-[0.04em]">
+            <span className="bg-teal text-ink box-decoration-clone px-[0.04em]">
               {p.title}
             </span>
           </h3>
@@ -144,11 +144,11 @@ export function CaseFile({ project, ink, children }: CaseFileProps) {
             <div className="lg:sticky lg:top-28">
               <p
                 aria-hidden="true"
-                className="font-display text-mega  leading-[0.85] tracking-[-0.03em] tabular-nums"
+                className="font-display text-mega leading-[0.85] tracking-[-0.03em] tabular-nums"
               >
                 {p.number}
               </p>
-              <p className="font-display text-h3 text-orange mt-4 hidden max-w-[16ch] leading-[1.1] lg:block">
+              <p className="font-display text-h3 text-teal-text mt-4 hidden max-w-[16ch] leading-[1.1] lg:block">
                 {p.title}
               </p>
             </div>
