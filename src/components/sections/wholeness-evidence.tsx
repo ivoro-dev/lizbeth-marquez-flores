@@ -25,6 +25,7 @@ export function WholenessEvidence({ images }: { images: Img[] }) {
   const before = find(images, "profile-before");
   const after = find(images, "profile-after-1-month");
   const insights = find(images, "insights-30-days");
+  const insightsBefore = find(images, "insights-before");
 
   useGSAP(
     () => {
@@ -112,16 +113,27 @@ export function WholenessEvidence({ images }: { images: Img[] }) {
               ))}
             </div>
             {insights && (
-              <figure className="mt-6 max-w-[28rem]">
-                <ClipImage
-                  image={insights}
-                  alt=""
-                  sizes="(min-width: 640px) 28rem, 100vw"
-                />
-                <figcaption className="text-label mt-3 leading-snug opacity-65">
-                  {insights.alt}
-                </figcaption>
-              </figure>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                {[
+                  { label: "Insights before", img: insightsBefore },
+                  { label: "Insights, 30 days after", img: insights },
+                ].map(
+                  (x) =>
+                    x.img && (
+                      <figure key={x.label}>
+                        <ClipImage
+                          image={x.img}
+                          sizes="(min-width: 640px) 30vw, 100vw"
+                        />
+                        <figcaption className="mt-3">
+                          <Label tone="current" className="opacity-65">
+                            {x.label}
+                          </Label>
+                        </figcaption>
+                      </figure>
+                    ),
+                )}
+              </div>
             )}
           </div>
         )}

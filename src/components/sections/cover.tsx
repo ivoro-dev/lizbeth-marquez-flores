@@ -129,7 +129,7 @@ export function Cover() {
         >
           <div
             data-portrait-scale
-            className="absolute right-[4%] bottom-0 h-[min(100%,620px)] origin-bottom md:right-auto md:left-[56%] md:h-[min(100%,1040px)] lg:left-[54%]"
+            className="absolute inset-x-0 bottom-0 flex h-[min(100%,460px)] origin-bottom justify-center md:h-[min(100%,920px)] md:pl-[16%]"
           >
             <div data-portrait-frame className="relative h-full">
               <Image
@@ -139,7 +139,7 @@ export function Cover() {
                 width={coverPortrait.width}
                 height={coverPortrait.height}
                 priority
-                sizes="(min-width: 768px) 32vw, 50vw"
+                sizes="(min-width: 768px) 55vw, 95vw"
                 className="h-full w-auto origin-bottom object-contain"
               />
             </div>

@@ -32,7 +32,8 @@ Each task lists what "done" means. Follow `CLAUDE.md` for checks.
 - [x] **16. Boss Babes event photos.** (20 Nov.) Added repost of the full room + speaker photo. `event-2-room` not used (crop of the repost). Empty-room setup photos still needed from client.
 - [x] **17. More teal.** (20 Nov.) Highlights, links, scrollbar, selection, intro counter now teal. Orange kept only for: Decision underline, `130+`, `72h` + its line, hovers, cursor, Featured label.
 - [x] **18. Cover portrait.** (20 Nov.) Background removed (`portrait/lizbeth-09-cutout.webp`), large, stands behind the name (z-index) so letters are never covered.
-- [ ] **19. Wholeness analytics before/after.** Waiting for a "before" Instagram insights screenshot from client. Pair it with `insights-30-days` in the "One month later" block.
+- [x] **19. Wholeness analytics before/after.** (20 Nov.) `insights-before` paired with `insights-30-days` in the "One month later" block.
+- [x] **20. Client round 2.** (20 Nov.) New cover photo with table (`portrait/lizbeth-cover-table.webp`, white bg removed), centred slightly right; real Work Drama logo (replaced AI version); 2 episode covers added; Boss Babes event set-up photos added; WAC logo removed from gallery; captions fixed (branded photo shoot, five-practitioner carousel).
 
 Also fixed 20 Nov: with reduced motion, SplitReveal headings could stay hidden and `72h` / `130+` showed 0 (hook resolves after hydration). Now final state.
 

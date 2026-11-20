@@ -97,13 +97,13 @@ export const projects: Project[] = [
       },
       {
         src: "/images/unsorted/ig-carousel-who-should-you-see-1.webp",
-        alt: "Instagram carousel: Who should you see?",
+        alt: "Carousel introducing all five practitioners, so patients can see who can help them: cover slide",
         width: 1080,
         height: 1350,
       },
       {
         src: "/images/unsorted/ig-carousel-guljan-founder-2.webp",
-        alt: "Instagram carousel: introducing the founder and acupuncturist",
+        alt: "Carousel introducing all five practitioners: the founder and acupuncturist",
         width: 1080,
         height: 1350,
       },
@@ -156,16 +156,16 @@ export const projects: Project[] = [
         height: 613,
       },
       {
+        src: "/images/wholeness/insights-before.webp",
+        alt: "Instagram insights before the rewrite",
+        width: 900,
+        height: 1250,
+      },
+      {
         src: "/images/wholeness/insights-30-days.webp",
         alt: "Instagram insights for the 30 days after the rewrite",
         width: 1125,
         height: 1145,
-      },
-      {
-        src: "/images/wholeness/logo.webp",
-        alt: "Wholeness Acupuncture Center logo",
-        width: 1179,
-        height: 833,
       },
     ],
     note: "Show two parts: (1) bio before/after labelled 'Profile positioning and bio rewrite'; (2) 'One month later': profile-before vs profile-after-1-month screenshots + insights-30-days. Let the screenshots speak; don't write growth numbers or percentages in copy.",
@@ -186,6 +186,18 @@ export const projects: Project[] = [
       "Grew attendance from 50 to 130+ and expanded across state lines. Featured on NBC Connecticut and FOX61.",
     stat: { from: "50", to: "130+", label: "attendees per event" },
     images: [
+      {
+        src: "/images/boss-babes/event-2-decor.webp",
+        alt: "Event set-up with the event planner: lavender tables, florals and the Boss Babes & Brunch backdrop",
+        width: 1200,
+        height: 1494,
+      },
+      {
+        src: "/images/boss-babes/event-1-decor.webp",
+        alt: "Event set-up: lavender place settings with gift bags and the programme at each seat",
+        width: 1200,
+        height: 1600,
+      },
       {
         src: "/images/boss-babes/event-2-shoutout.webp",
         alt: "Instagram story reposting a full room at a Boss Babes & Brunch event",
@@ -252,12 +264,12 @@ export const projects: Project[] = [
       {
         src: "/images/work-drama/logo.webp",
         alt: "Work Drama podcast logo",
-        width: 1254,
-        height: 1254,
+        width: 1200,
+        height: 1200,
       },
       {
         src: "/images/work-drama/host-54.webp",
-        alt: "Lizbeth holding the red Work Drama mug",
+        alt: "Branded photo shoot: Lizbeth with the red Work Drama mug",
         width: 1024,
         height: 1535,
       },
@@ -268,14 +280,26 @@ export const projects: Project[] = [
         height: 1800,
       },
       {
+        src: "/images/work-drama/episode-office-knows.webp",
+        alt: "Episode cover: The office knows!",
+        width: 1200,
+        height: 1200,
+      },
+      {
+        src: "/images/work-drama/episode-caught-cashing.webp",
+        alt: "Episode cover: Caught cashing my check!",
+        width: 1200,
+        height: 1200,
+      },
+      {
         src: "/images/work-drama/host-49.webp",
-        alt: "Lizbeth at the podcast desk with microphone",
+        alt: "Branded photo shoot: Lizbeth at the podcast desk with microphone",
         width: 1024,
         height: 683,
       },
       {
         src: "/images/work-drama/host-47.webp",
-        alt: "Lizbeth in a red suit with the Work Drama mug",
+        alt: "Branded photo shoot: Lizbeth throwing rejected Work Drama stories into the waste bin",
         width: 1024,
         height: 1535,
       },

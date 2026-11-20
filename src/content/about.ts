@@ -28,10 +28,10 @@ export const bandPortrait: Img = {
 };
 
 export const coverPortrait: Img = {
-  src: "/images/portrait/lizbeth-09-cutout.webp",
-  alt: "Lizbeth Marquez-Flores standing, smiling, in a blue blouse and jeans",
-  width: 427,
-  height: 1104,
+  src: "/images/portrait/lizbeth-cover-table.webp",
+  alt: "Lizbeth Marquez-Flores leaning on a wooden table, smiling, in a blue blouse and jeans",
+  width: 976,
+  height: 1183,
 };
 
 /** Cards on the dial under the cover: Lizbeth at work, titled by discipline. */
